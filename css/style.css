@@ -115,8 +115,6 @@ body {
 }
 
 .card-price {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 30px;
 }
 
