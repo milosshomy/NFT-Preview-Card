@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-blue-clr: hsl(215, 51%, 70%);
+  --cyan-clr: hsl(178, 100%, 50%);
+  --white-clr: hsl(0, 0%, 100%);
+  --very-dark-blue-main-clr: hsl(217, 54%, 11%);
+  --very-dark-blue-card-clr: hsl(216, 50%, 16%);
+  --very-dark-blue-line-clr: hsl(215, 32%, 27%);
+  --text-fs: 1.125rem;
+  --primary-ff: "Outfit", sans-serif;
+  --light-fw: 300;
+  --regular-fw: 400;
+  --semi-bold-fw: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-clr);
+  font-family: var(--primary-ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 350px;
+  min-height: 600px;
+  background-color: var(--very-dark-blue-card-clr);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card-image {
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.bg-color {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--cyan-clr);
+  border-radius: 10px;
+  opacity: 0;
+  transition: 200ms ease-in;
+}
+
+.card-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.card-image:hover .eye {
+  visibility: visible;
+}
+
+.card-image:hover .bg-color {
+  opacity: 0.6;
+}
+
+.title {
+  color: var(--white-clr);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: var(--semi-bold-fw);
+  transition: 200ms ease-in;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--cyan-clr);
+}
+
+.text {
+  font-size: var(--text-fs);
+  color: var(--soft-blue-clr);
+}
+
+.card-content {
+  margin-bottom: 30px;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card-price img {
+  margin-right: 10px;
+}
+
+.price {
+  color: var(--cyan-clr);
+  font-size: var(--text-fs);
+  font-weight: var(--light-fw);
+}
+
+.remaining {
+  color: var(--soft-blue-clr);
+  font-size: var(--text-fs);
+  font-weight: var(--light-fw);
+}
+
+.line {
+  border: 1px solid var(--very-dark-blue-line-clr);
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 50px;
+  margin-right: 10px;
+  border: 1px solid var(--white-clr);
+  border-radius: 50%;
+}
+
+.creator {
+  color: var(--soft-blue-clr);
+  font-size: var(--text-fs);
+}
+
+.name {
+  color: var(--white-clr);
+  transition: 200ms ease-in;
+}
+
+.name:hover {
+  color: var(--cyan-clr);
+}
